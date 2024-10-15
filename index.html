@@ -17,30 +17,48 @@
 <header>  <!–- Encabezado con logo y título, no tiene nav -->
     <section id="header_section_logo">
         <a href="index.html">
-            <img src="imagenes\oro.jpg" alt="Dolar" >
+            <img src="imagenes\logo.png" alt="Dolar" >
         </a>
     </section>
     <section id="header_section_titulo">
-        <h1>M O N I T O R   &nbsp;&nbsp;&nbsp;   D E   &nbsp;&nbsp;&nbsp;   I N V E R S I O N E S</h1>
+        <h1><b>&#128187 &nbsp; M O N I T O R   &nbsp;&nbsp;&nbsp;   D E   &nbsp;&nbsp;&nbsp;   I N V E R S I O N E S &nbsp; &#128076</b></h1>
     </section>
 </header>
 
 <div id="aside_mas_main"><!–- Es un importante bloque que une el lado izquierdo (aside) y el lado derecho (main) del cuerpo principal de la página
                      (body); expluyendo al encabezado (header) y al pié de página (footer)-->
 
+<aside> <!–- Apartado con nav e imagen en cada enlace -->
+    <nav>
+        <section>
+            <h5>MES</h5>
+            <a href="mes.html">
+                <img src="imagenes\mes.png" alt="Dolar">
+            </a>
+        </section>
+        <section>
+            <h5>AÑO</h5>
+            <a href="año.html">
+                <img src="imagenes\año.jpg" alt="Dolar">
+            </a>
+        </section>
+        <section>
+            <h6>CINCO AÑOS</h6>
+                <a href="quinquenio.html">
+                <img src="imagenes\cinco.jpg" alt="Dolar">
+            </a>
+        </section>
+    </nav>      
+</aside>
 
 <main> <!–- Principal con una sección para un gráfico grande y otra sección con 8 artículos con enlances incorporados en cada uno de ellos-->
-    <section id="main_section_graficoprincipal"><!–- Sección gráfico grande-->
-        <article>
-            <h1>GRAFICO VARIACION MENSUAL</h1><br><br><br>
-            <img src="imagenes\grafico-metales.jpg" alt="Dolar" width="1000px" height="600px">
-        </article>
-    </section>
+    
+    <div class="grid_main">
     <section id="main_section_graficossecundarios"><!–- Sección con 8 artículos con enlances incorporados en cada uno de ellos-->
         <article id="main_section_graficossecundarios_dolar">
             <h4>DOLAR</h4>
             <a href="dolar.html">
-                <img src="imagenes\dolar.jpg" alt="Dolar">
+                <img id="animado" src="imagenes\dolar.jpg" alt="Dolar">
             </a>
         </article>
         <article id="main_section_graficossecundarios_plazofijo">
@@ -86,6 +104,15 @@
             </a>
         </article>
     </section>
+    </div>
+    <div class="grid_main">
+    <section id="main_section_graficoprincipal"><!–- Sección gráfico grande-->
+        <article>
+            <h1>GRAFICO VARIACION MENSUAL</h1>
+            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTtHWFuSaMzaDfkaSNFdbb1G0dlT5yIgEOUc5WDonCQhXRyUdvEgFoeqY32hYKpqUBpDp8sZhihwvP7/pubchart?oid=777004498&format=interactive" alt="Dolar">
+        </article>
+    </section>
+    </div>
 </main>
 </div>
 
@@ -114,6 +141,8 @@
     </section>
 </footer>
 
+
+    <script src="main.js"></script>
 </body>
 
 </html>
